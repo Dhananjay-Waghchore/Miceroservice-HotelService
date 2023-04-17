@@ -2,6 +2,8 @@ server:
   port: 8082
 
 spring:
+  application:
+    name: HotelService
   datasource:
     url: jdbc:postgresql://localhost:5432/microservices-HotelService
     username: postgres
@@ -13,3 +15,12 @@ spring:
 
   main:
     allow-circular-references: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8084/eureka
