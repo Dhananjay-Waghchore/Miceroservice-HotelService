@@ -16,6 +16,10 @@ spring:
   main:
     allow-circular-references: true
 
+  config:
+    import: configserver:http://localhost:8086
+
+
 eureka:
   instance:
     prefer-ip-address: true
